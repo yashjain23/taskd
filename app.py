@@ -17,13 +17,7 @@ def read_db():
         pass
 
 def get_next_id():
-    next_id = len(db)+1
-    keys = list(db.keys())
-    keys.sort()
-    for i in range(len(keys)):
-        if i+1!=int(keys[i]):
-            return i+1
-    return next_id
+    return max([int(k) for k in db]+[1])+1
 
 def create(args):
     id = get_next_id()
