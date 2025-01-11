@@ -59,7 +59,7 @@ def list_task(args):
     print("="*150)
 
     for k in filtered_db:
-        print("{:^4} {:^60} {:^10} {:^40} {:^10}".format(db[k]['id'], db[k]['description'], db[k]['status'], db[k]['updated_at'], db[k]['created_at']) )
+        print("{:^4} {:^60} {:^10} {:^40} {:^40}".format(db[k]['id'], db[k]['description'], db[k]['status'], db[k]['updated_at'], db[k]['created_at']) )
         print("-"*150)
 
 def main():
