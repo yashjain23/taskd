@@ -1,7 +1,6 @@
 from argparse import ArgumentParser
 import json
 from datetime import datetime
-import os
 
 db = {}
 
@@ -52,7 +51,7 @@ def delete(args):
         persist_db()
         print(f"Successfully deleted the task with id {args.id}")
 
-def list(args):
+def list_task(args):
     
     if args.status==None:
         filtered_db = db
@@ -79,7 +78,7 @@ def main():
     )
 
     parser.add_argument('-s', '--status', help=" Status filter", choices=['Done', 'ToDo', 'In Progress'])
-    parser.set_defaults(func=list)
+    parser.set_defaults(func=list_task)
 
     subparsers = parser.add_subparsers(help="Operations on task", dest='subparser_name')
 
