@@ -6,7 +6,7 @@ setup(
     py_modules=["app"],
     entry_points={
         'console_scripts': [
-            'hello-world = app:main',
+            'taskd = app:main',
         ]
     },
     python_requires=">=3.12.3"
