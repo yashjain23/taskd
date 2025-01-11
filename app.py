@@ -17,7 +17,7 @@ def read_db():
         pass
 
 def get_next_id():
-    return max([int(k) for k in db]+[1])+1
+    return max([int(k) for k in db]+[0])+1
 
 def create(args):
     id = get_next_id()
