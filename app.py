@@ -54,13 +54,13 @@ def list_task(args):
         for k in db:
             if db[k]['status'] == args.status:
                 filtered_db[k]=db[k]
-    print("="*150)
+    print("="*160)
     print("{:^4} {:^60} {:^10} {:^40} {:^40}".format('Id', 'Description', 'Status', 'Last Status Updated At', 'Created At') )
-    print("="*150)
+    print("="*160)
 
     for k in filtered_db:
         print("{:^4} {:^60} {:^10} {:^40} {:^40}".format(db[k]['id'], db[k]['description'], db[k]['status'], db[k]['updated_at'], db[k]['created_at']) )
-        print("-"*150)
+        print("-"*160)
 
 def main():
 
